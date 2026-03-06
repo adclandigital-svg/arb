@@ -68,7 +68,7 @@ export default function WhyRBA() {
             <div className="overflow-hidden rounded-3xl shadow-2xl">
               <img
                 src="https://www.rbarealcon.com/images/gallery-3.webp"
-                className="w-full h-full object-cover transition duration-[2000ms] group-hover:scale-110"
+                className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[550px] object-cover transition duration-[2000ms] group-hover:scale-110"
                 loading="lazy"
               />
             </div>

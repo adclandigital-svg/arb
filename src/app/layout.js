@@ -14,9 +14,9 @@ const gildaDisplay = Gilda_Display({
 });
 
 export const metadata = {
-  title: "ARB Group | Engineering & Infrastructure Solutions",
+  title: "RBA Group | Engineering, Infrastructure & Industrial Solutions",
   description:
-    "ARB Group delivers innovative engineering, infrastructure, and industrial solutions with a commitment to quality and sustainability.",
+    "RBA Group specializes in engineering excellence, infrastructure development, and industrial solutions with innovation, quality, and sustainability at its core.",
 };
 
 export default function RootLayout({ children }) {

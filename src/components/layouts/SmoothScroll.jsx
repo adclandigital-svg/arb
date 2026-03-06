@@ -33,6 +33,9 @@ export default function LenisProvider({ children }) {
             smoothTouch: false,
           });
 
+          // Scroll to top on refresh/page load
+          lenisInstance.scrollTo(0, { immediate: true });
+
           instanceRef.current = lenisInstance;
 
           const raf = (time) => {

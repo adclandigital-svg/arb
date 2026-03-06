@@ -5,6 +5,9 @@ import WhyRBA from "@/components/home/WhyRBA";
 import FeaturedCommunities from "@/components/home/FeaturedCommunities";
 import LocationNeighborhood from "@/components/home/LocationNeighborhood";
 import WalkthroughSection from "@/components/home/WalkthroughSection"
+import BlogSection from "@/components/home/BlogSection"
+
+
 export default function Home() {
   return (
     <>
@@ -13,6 +16,7 @@ export default function Home() {
       <LocationNeighborhood/>
       <WhyRBA />
       <FeaturedCommunities />
+      <BlogSection/>
       <Testimonials />
       <WalkthroughSection/>
     </>

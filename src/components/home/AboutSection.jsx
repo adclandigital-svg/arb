@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function AboutSection() {
   return (
-    <section className="relative py-24 lg:py-40 bg-[#f9faf9] overflow-hidden">
+    <section className="relative py-24 lg:py-40 bg-[#ffffff] overflow-hidden">
 
       <div className="max-w-[1600px] mx-auto px-6 lg:px-10 relative">
 

@@ -175,7 +175,7 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section className="py-20 bg-[#f6faf7]">
+    <section className="py-30 bg-[#ffffff]">
 
       <div className="max-w-[1200px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
 

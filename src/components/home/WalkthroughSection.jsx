@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function WalkthroughSection() {
   return (
-    <section className="py-14 bg-[#ffffff] overflow-hidden">
+    <section className="py-14 bg-[#f8faf9] overflow-hidden">
 
       <div className="max-w-[1700px] mx-auto px-6">
 

@@ -3,6 +3,8 @@ import "./globals.css";
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
 import LenisProvider from "@/components/layouts/SmoothScroll";
+import PopupForm from "@/components/PopupForm";
+import ScrollToTop from "@/components/layouts/ScrollToTop";
 
 const gildaDisplay = Gilda_Display({
   subsets: ["latin"],
@@ -21,11 +23,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${gildaDisplay.variable} antialiased`}>
+        <ScrollToTop />
         <LenisProvider>
           <Navbar />
           {children}
           <Footer />
         </LenisProvider>
+        <PopupForm/>
       </body>
     </html>
   );

@@ -232,6 +232,7 @@ export default function BlogSection() {
               className="w-full h-[400px] md:h-[600px] object-cover"
               whileHover={{ scale: 1.12 }}
               transition={{ duration: 0.8 }}
+              loading="lazy"
             />
 
             {/* Animated Overlay */}

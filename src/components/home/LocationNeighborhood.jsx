@@ -248,6 +248,7 @@ export default function NeighborhoodHoverTabs() {
                     className="w-full h-56 sm:h-64 md:h-72 object-cover"
                     whileHover={{ scale: 1.08 }}
                     transition={{ duration: 0.4 }}
+                    loading="lazy"
                   />
                 </motion.div>
 

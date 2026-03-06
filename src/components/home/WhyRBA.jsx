@@ -69,6 +69,7 @@ export default function WhyRBA() {
               <img
                 src="https://www.rbarealcon.com/images/gallery-3.webp"
                 className="w-full h-full object-cover transition duration-[2000ms] group-hover:scale-110"
+                loading="lazy"
               />
             </div>
 

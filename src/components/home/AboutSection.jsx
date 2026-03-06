@@ -67,6 +67,7 @@ export default function AboutSection() {
                 src="https://www.rbarealcon.com/images/banner-3.webp"
                 alt="Uptown Karnal"
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
 

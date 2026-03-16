@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
           {children}
           <Footer />
         </LenisProvider>
-        <PopupForm/>
+        {/* <PopupForm/> */}
       </body>
     </html>
   );

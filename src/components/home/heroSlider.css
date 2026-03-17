@@ -42,7 +42,7 @@
 .hero-slider .bottom-nav-buttons {
   position: absolute;
   bottom: 2rem;
-  right: 2rem;
+  right: 6rem;
   display: flex;
   gap: 1rem;
   z-index: 40;

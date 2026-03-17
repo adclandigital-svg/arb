@@ -1,0 +1,53 @@
+.floating-actions {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 999;
+}
+
+.whatsapp-icon,
+.scroll-top-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #25d366; /* WhatsApp green */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.3rem;
+}
+
+.scroll-top-btn {
+  background: #c89b5b; /* Theme color for scroll top */
+}
+
+.whatsapp-icon:hover {
+  transform: scale(1.1);
+}
+
+.scroll-top-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .floating-actions {
+    bottom: 20px;
+    right: 20px;
+    gap: 10px;
+  }
+
+  .whatsapp-icon,
+  .scroll-top-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+  }
+}

@@ -5,6 +5,7 @@ import Footer from "@/components/layouts/Footer";
 import LenisProvider from "@/components/layouts/SmoothScroll";
 import PopupForm from "@/components/PopupForm";
 import ScrollToTop from "@/components/layouts/ScrollToTop";
+import FloatingActions from "@/components/layouts/FloatingActions";
 
 const gildaDisplay = Gilda_Display({
   subsets: ["latin"],
@@ -36,7 +37,8 @@ export default function RootLayout({ children }) {
           {children}
           <Footer />
         </LenisProvider>
-        {/* <PopupForm/> */}
+        <PopupForm/>
+        <FloatingActions/>
       </body>
     </html>
   );

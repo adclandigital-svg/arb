@@ -67,30 +67,30 @@ export default function PopupForm() {
                 <input
                   type="text"
                   placeholder="Full Name"
-                  className="w-full border rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-[#106a39] placeholder:text-gray-700"
+                  className="w-full border rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-[#c89b5b] placeholder:text-gray-700"
                 />
 
                 <input
                   type="email"
                   placeholder="Email Address"
-                  className="w-full border rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-[#106a39] placeholder:text-gray-700"
+                  className="w-full border rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-[#c89b5b] placeholder:text-gray-700"
                 />
 
                 <input
                   type="tel"
                   placeholder="Phone Number"
-                  className="w-full border rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-[#106a39] placeholder:text-gray-700"
+                  className="w-full border rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-[#c89b5b] placeholder:text-gray-700"
                 />
 
                 <textarea
                   rows={3}
                   placeholder="Your Message"
-                  className="w-full border rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-[#106a39] placeholder:text-gray-700"
+                  className="w-full border rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-[#c89b5b] placeholder:text-gray-700"
                 />
 
                 <button
                   type="submit"
-                  className="w-full bg-[#106a39] text-white py-3 rounded-xl hover:bg-[#0d5a30] transition font-semibold"
+                  className="w-full bg-[#c89b5b] text-white py-3 rounded-xl hover:bg-[#b8914a] transition font-semibold"
                 >
                   Submit Request
                 </button>

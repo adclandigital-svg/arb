@@ -1,0 +1,157 @@
+/* ================= SECTION ================= */
+.t7-section {
+  padding: 100px 20px;
+  background: #f5f5f5;
+}
+
+/* ================= CONTAINER ================= */
+.t7-container {
+  max-width: 1650px;   /* 🔥 MAIN FIX */
+  margin: 0 auto;
+  padding: 0 40px;     /* 🔥 SIDE SPACING FOR LARGE SCREENS */
+
+  display: flex;
+  gap: 80px;           /* 🔥 MORE BREATHING SPACE */
+  align-items: center;
+}
+
+/* ================= LEFT ================= */
+.t7-left {
+  flex: 1;
+  max-width: 650px;    /* 🔥 CONTROL TEXT WIDTH */
+}
+
+.t7-left h6 {
+  letter-spacing: 4px;
+  font-size: 16px;
+  color: #c89b5b;
+}
+
+.t7-left h2 {
+  font-size: 3rem;
+  margin: 15px 0;
+  color: #111;
+  line-height: 1.2;
+}
+
+/* DESCRIPTION */
+.t7-desc {
+  color: #555;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  font-size: 18PX;
+}
+
+/* FEATURES */
+.t7-features {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 40px;
+}
+
+.t7-feature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  color: #111;
+}
+
+.t7-feature svg {
+  color: #c89b5b;
+}
+
+/* LINE */
+.t7-line {
+  width: 70px;
+  height: 3px;
+  background: #c89b5b;
+}
+
+/* ================= RIGHT ================= */
+.t7-right {
+  flex: 1;
+  max-width: 700px; /* 🔥 PREVENT OVER-STRETCH */
+}
+
+/* CARD */
+.t7-card {
+  background: #fff;
+  padding: 60px; /* 🔥 MORE PREMIUM SPACE */
+  border-radius: 18px;
+  border: 1px solid #eee;
+
+  box-shadow: 0 25px 80px rgba(0,0,0,0.06);
+}
+
+/* TEXT */
+.t7-card p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* USER */
+.t7-user {
+  margin-top: 25px;
+}
+
+.t7-user h4 {
+  font-size: 1.2rem;
+  color: #111;
+}
+
+.t7-user span {
+  font-size: 14px;
+  color: #c89b5b;
+}
+
+/* NAV */
+.t7-nav {
+  margin-top: 25px;
+}
+
+.t7-nav span {
+  display: inline-block;
+  width: 35px;
+  height: 3px;
+  margin-right: 10px;
+  background: #ddd;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.t7-nav span.active {
+  background: #c89b5b;
+  width: 60px;
+}
+
+/* ================= LARGE SCREENS ================= */
+@media (min-width: 1400px) {
+  .t7-left h2 {
+    font-size: 3.4rem;
+  }
+
+  .t7-card {
+    padding: 70px;
+  }
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 992px) {
+  .t7-container {
+    flex-direction: column;
+    gap: 50px;
+    padding: 0 20px;
+  }
+
+  .t7-left,
+  .t7-right {
+    max-width: 100%;
+  }
+
+  .t7-left h2 {
+    font-size: 2.2rem;
+  }
+}

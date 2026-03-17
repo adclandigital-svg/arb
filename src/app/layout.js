@@ -1,4 +1,4 @@
-import { Gilda_Display } from "next/font/google";
+import { Gilda_Display, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
@@ -13,6 +13,13 @@ const gildaDisplay = Gilda_Display({
   variable: "--font-gilda",
 });
 
+const cormorantGaramond = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
+  variable: "--font-cormorant",
+});
+
 export const metadata = {
   title: "RBA Group | Engineering, Infrastructure & Industrial Solutions",
   description:
@@ -22,7 +29,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${gildaDisplay.variable} antialiased`}>
+      <body className={`${cormorantGaramond.className} antialiased`}>
         <ScrollToTop />
         <LenisProvider>
           <Navbar />

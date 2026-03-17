@@ -1,0 +1,221 @@
+/* ================= SECTION ================= */
+.loc2-section {
+  padding: 60px 20px;
+  position: relative;
+  background: #ffffff;
+  overflow: hidden;
+  padding-top: 0px;
+}
+
+/* Background */
+.loc2-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("https://img.freepik.com/premium-vector/cityscape-building-perspective-modern-building-city-skyline-city-silhouette-city-skyscrapers-business-center-illustration-flat-design_51530-4376.jpg?w=1480")
+    center/cover no-repeat;
+  opacity: 0.06;
+  z-index: 0;
+}
+
+/* Container */
+.loc2-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1650px;
+  margin: auto;
+}
+
+/* ================= HEADER ================= */
+.loc2-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.loc2-header h6 {
+  letter-spacing: 4px;
+  font-size: 16px;
+  color: #c89b5b;
+  margin-bottom: 0px;
+}
+
+.loc2-header h2 {
+  font-size: 2.8rem;
+  color: #000;
+  font-weight: 500;
+}
+
+/* ================= LAYOUT ================= */
+.loc2-wrapper {
+  display: flex;
+  gap: 40px;
+  align-items: stretch;
+}
+
+/* ================= TABS ================= */
+.loc2-tabs {
+  flex: 0.3;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.loc2-tab {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  background: #f7f7f7;
+  border: 1px solid #c89b5b30;
+  transition: all 0.3s ease;
+  color: #000;
+}
+
+.loc2-tab:hover {
+  background: #f0f0f0;
+  transform: translateX(5px);
+}
+
+.loc2-tab.active {
+  background: #c89b5b;
+  color: #fff;
+  transform: translateX(8px);
+}
+
+.loc2-number {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* ================= IMAGE PANEL ================= */
+.loc2-display {
+  flex: 0.8;
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+/* 🔥 STACK IMAGES */
+.loc2-image-wrapper {
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  overflow: hidden;
+
+  opacity: 0;
+  transform: scale(1.1); /* start slightly zoomed */
+  transition:
+    opacity 0.6s ease-in-out,
+    transform 1.2s ease-out;
+}
+
+/* 🔥 ACTIVE IMAGE */
+.loc2-image-wrapper.active {
+  opacity: 1;
+  transform: scale(1); /* zoom out smoothly */
+  z-index: 2;
+}
+
+/* ================= REVEAL ================= */
+.image-reveal {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* IMAGE */
+.image-reveal img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* WHITE MASK */
+.image-reveal::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #ffffff;
+  z-index: 2;
+  transform: translateX(0);
+}
+
+/* 🔥 ONLY FIRST TIME REVEAL */
+.loc2-section.in-view .image-reveal.first-load::before {
+  animation: revealAnim 1s ease forwards;
+}
+
+/* 🔥 REMOVE MASK AFTER FIRST RUN */
+.image-reveal.done::before {
+  display: none;
+}
+
+/* KEYFRAME */
+@keyframes revealAnim {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+/* ================= OVERLAY ================= */
+.loc2-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: #fff;
+}
+
+.loc2-overlay h3 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.loc2-overlay span {
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .loc2-wrapper {
+    gap: 25px;
+  }
+
+  .loc2-header h2 {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .loc2-section {
+    padding-top: 30px;
+  }
+  .loc2-wrapper {
+    height: 600px;
+    flex-direction: column;
+  }
+
+  .loc2-display {
+    height: 300px;
+  }
+
+  .loc2-tabs {
+    flex: 0.15;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .loc2-tab {
+    height: 80px;
+    min-width: 160px;
+  }
+}

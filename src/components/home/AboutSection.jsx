@@ -11,39 +11,44 @@ export default function AboutSection() {
     { icon: <FaShieldAlt />, value: "24/7", label: "Security & Support" },
   ];
 
-  const imageRef = useRef(null);
-  const [imageVisible, setImageVisible] = useState(false);
+  const sectionRef = useRef(null);
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setImageVisible(true);
-            observer.disconnect(); // stop observing after visible
+            setVisible(true);
+            observer.disconnect();
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.3 }
     );
 
-    if (imageRef.current) observer.observe(imageRef.current);
+    if (sectionRef.current) observer.observe(sectionRef.current);
 
     return () => observer.disconnect();
   }, []);
 
   return (
-    <section className="about-section">
+    <section className="about-section" ref={sectionRef}>
       <div className="about-container">
-        {/* Text Section */}
-        <div className="about-text">
+
+        {/* TEXT */}
+        <div className={`about-text ${visible ? "active" : ""}`}>
           <h2>
-            Luxury Living <span className="highlight">Redefined</span>
+            Where Nature <br />
+            <span className="highlight">Meets Modern Luxury</span>
           </h2>
+
           <p>
-            Experience the perfect blend of comfort and elegance in our premium
-            residential community. Thoughtfully designed plots, world-class amenities,
-            and 24/7 security create a lifestyle you deserve. Discover your dream home today.
+            Uptown is a meticulously designed haven that seamlessly blends with
+            nature. Located in the heart of Karnal's extension, our project is
+            strategically placed near essential social infrastructure and
+            prominent landmarks. Offering an exclusive collection of residential
+            plots sprawled across 14 acres, Uptown defines luxury living.
           </p>
 
           <div className="stats">
@@ -57,15 +62,17 @@ export default function AboutSection() {
           </div>
         </div>
 
-        {/* Image Section with Reveal */}
+        {/* IMAGE */}
         <div className="about-image-container">
-          <img
-            ref={imageRef}
-            src="https://www.rbarealcon.com/images/banner-2.webp"
-            alt="Luxury Real Estate"
-            className={`about-image ${imageVisible ? "reveal" : ""}`}
-          />
+          <div className={`image-reveal-wrapper ${visible ? "active" : ""}`}>
+            <img
+              src="https://www.rbarealcon.com/images/banner-2.webp"
+              alt="Luxury Real Estate"
+              className="about-image"
+            />
+          </div>
         </div>
+
       </div>
     </section>
   );

@@ -1,0 +1,183 @@
+/* ================= SECTION ================= */
+.proj2-section {
+  padding: 50px 20px;
+  background: #f5f5f5;
+}
+
+/* CONTAINER */
+.proj2-container {
+  max-width: 1600px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* HEADER */
+.proj2-header {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.proj2-header h6 {
+  letter-spacing: 4px;
+  font-size: 16px;
+  color: #c89b5b;
+}
+
+.proj2-header h2 {
+  font-size: 3rem;
+  color: #111;
+}
+
+.proj2-subtext {
+  max-width: 700px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* MAIN IMAGE WRAPPER */
+.proj2-main-wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  flex-wrap: wrap; /* allow stacking on small screens */
+}
+
+/* MAIN IMAGE */
+.proj2-main {
+  position: relative;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 600px;
+}
+
+/* CROSSFADE IMAGES */
+.proj2-crossfade-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Overlay info */
+.proj2-overlay {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 15px 25px;
+  border-radius: 10px;
+}
+
+.proj2-overlay h3 {
+  font-size: 1.5rem;
+}
+
+.proj2-overlay span {
+  font-size: 14px;
+}
+
+/* Right-side buttons (desktop) */
+.proj2-button-tab-onimage {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 10;
+}
+
+.proj2-tab-button {
+  padding: 12px 22px;
+  background: rgba(250, 247, 242, 0.85);
+  border-radius: 15px;
+  border: 1px solid #eee;
+  cursor: pointer;
+  text-align: center;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  color: #111;
+}
+
+.proj2-tab-button.active {
+  border-color: #c89b5b;
+  background: #c89b5b;
+  color: #fff;
+}
+
+.proj2-tab-button h4 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.proj2-tab-button span {
+  font-size: 13px;
+  color: #555;
+}
+
+.proj2-tab-button.active span {
+  color: #fff;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1200px) {
+  .proj2-main {
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 992px) {
+  /* Reduce main image height */
+  .proj2-main {
+    min-height: 400px;
+  }
+
+  /* Move tab buttons below the image */
+  .proj2-button-tab-onimage {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 12px;
+  }
+
+  .proj2-tab-button {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .proj2-main {
+    min-height: 400px;
+  }
+
+  .proj2-header h2 {
+    font-size: 2rem;
+  }
+
+  .proj2-subtext {
+    font-size: 14px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .proj2-main {
+    min-height: 400px;
+  }
+
+  .proj2-tab-button {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+}
